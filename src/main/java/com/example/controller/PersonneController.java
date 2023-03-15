@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-@RestController
-@RequestMapping("personne")
 @CrossOrigin(origins={"http://localhost","http://localhost:3000"})
+@RestController
+@RequestMapping("/personne/")
 public class PersonneController
 {
-    @GetMapping("/getAll")
+    @GetMapping("getAll")
     public Personne[] getAll() throws ClassNotFoundException, SQLException {
         Connexion connexion=new Connexion();
         Connection con= connexion.connect();
