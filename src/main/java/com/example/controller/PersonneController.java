@@ -13,7 +13,7 @@ import java.sql.SQLException;
 
 @RestController
 @RequestMapping("personne")
-@CrossOrigin(origins={"http://localhost:3000","http://deploiment-production.up.railway.app"})
+@CrossOrigin("http://localhost:3000")
 public class PersonneController
 {
     @GetMapping("/getAll")
