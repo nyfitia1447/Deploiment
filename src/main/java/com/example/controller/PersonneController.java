@@ -17,6 +17,7 @@ import java.sql.SQLException;
 public class PersonneController
 {
     @GetMapping("/getAll")
+    @CrossOrigin("http://localhost:3000")
     public Personne[] getAll() throws ClassNotFoundException, SQLException {
         Connexion connexion=new Connexion();
         Connection con= connexion.connect();
